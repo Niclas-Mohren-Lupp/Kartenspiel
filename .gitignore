@@ -1,0 +1,16 @@
+# Verfolge zuerst die Unity-Ordner, die du möchtest
+!Karten_Spiel_Unity/Assets/
+!Karten_Spiel_Unity/Packages/
+!Karten_Spiel_Unity/ProjectSettings/
+
+# Ignoriere alles andere
+Karten_Spiel_Unity/Library/
+Karten_Spiel_Unity/Temp/
+Karten_Spiel_Unity/UserSettings/
+
+# Optional: .vscode Ordner für Visual Studio Code (falls gewünscht)
+!Karten_Spiel_Unity/.vscode/
+
+# Ignoriere andere temporäre oder Cache-Dateien, falls vorhanden
+*.log
+*.swp
