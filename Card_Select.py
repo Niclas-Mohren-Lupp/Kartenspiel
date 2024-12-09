@@ -1,7 +1,8 @@
 import random
 Max_Karten = 51
+Zeiten_dict = {i: 0 for i in range(1, Max_Karten + 1)}
 
-def Wahrscheinlichkeitsmechanismus():
+def Wahrscheinlichkeitsalgorythmus():
     List_Karten = list(range(1, Max_Karten + 1))
     Wahrscheinlichkeit = [0.0196078431] * Max_Karten
     summe = sum(Wahrscheinlichkeit)
@@ -9,17 +10,22 @@ def Wahrscheinlichkeitsmechanismus():
     return Karte
 
 def Karteziehen():
-    def Variable_erstellen():
-        counter =+ 1
-        if counter == Max_Karten:
-            counter = 0
-        Random_Karte = Wahrscheinlichkeitsmechanismus()
-        variable_name = f"Variable_{counter}"
-        return {variable_name: Random_Karte}
+    Random_Karte = Wahrscheinlichkeitsalgorythmus()
+    return Random_Karte
 
-    ergebnis = Variable_erstellen()
-    Karten_dict = {}
-    Karten_dict.update(ergebnis)
-    print(Karten_dict)
+def hochzealen(i):
+    global Zeiten_dict
+    Nummer = i + 1
+    Zeiten_dict[Nummer] = 1
 
-Karteziehen()
+    for key in Zeiten_dict:
+        if Zeiten_dict[key] >= 1:
+            Zeiten_dict[key] += 1
+        if Zeiten_dict[key] > 51:
+            Zeiten_dict[key] = 0
+
+
+for _ in range (1, 1000):
+    Random_Karte = Karteziehen()
+    hochzealen(Random_Karte)
+print(Zeiten_dict)
