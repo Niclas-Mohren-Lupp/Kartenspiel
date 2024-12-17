@@ -1,0 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+public class Card_Select : MonoBehaviour
+{
+    void Start()
+    {
+        Random_karte = berechne_Wahrscheinlichkeit();
+        hochzealen(Random_Karte, Zeiten_dict);
+
+    }
+
+    void Update()
+    {
+
+    }
+
+    string Wahrscheinlichkeitsalgorythmus(zeiten_dict)
+    {
+        public<str>List_Karten = list(zeiten_dicts.keys())
+        Wahrscheinlichkeit = berechne_Wahrscheinlichkeit(zeiten_dict)
+        Random_Karte = random.choices(List_Karten, weights = Wahrscheinlichkeit, k = 1)[0]
+        print(Random_Karte)
+        return Random_Karte
+}
+
+string berechne_Wahrscheinlichkeit(zeiten_dict)
+{
+    k = 0.1
+        Gewichtung = { key: math.exp(k * value) for key, value in Zeiten_dict.items()}
+    summe_gewichtung = sum(Gewichtung.values())
+        Wahrscheinlichkeit = { key: gewicht / summe_gewichtung for key, gewicht in Gewichtung.itmes()}
+    Debug.Log(Random_Karte)
+        return Random Karte
+    }
+
+string hochzealen(Random_Karte, Zeiten_dict)
+{
+    foreach (int Key in Zeitendict)
+    {
+        if (Zeiten_dict[Key] < 51)
+        {
+            Zeiten_dict[Key] += 1;
+        }
+        else
+        {
+            Zeiten_dict[Key] = 0;
+        }
+    }
+    Zeiten_dict[random_karte = 1];
+}
+}
