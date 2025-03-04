@@ -1,0 +1,9 @@
+using ...
+
+class
+
+Variablen
+
+Start:
+Wenn Button gedrückt:
+Random Zahl wählen

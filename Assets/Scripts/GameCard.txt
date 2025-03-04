@@ -1,0 +1,14 @@
+using ...
+
+class
+
+Variablen
+
+Start:
+
+Ausgewählte Karte Auslesen
+
+
+Erstelle 51 Karten
+Mache alle Karten Unsichtbar
+Zeige die ausgewählte Karte
