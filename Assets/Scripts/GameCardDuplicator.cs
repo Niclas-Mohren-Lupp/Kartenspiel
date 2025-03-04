@@ -25,7 +25,7 @@ public class GameCardDuplicator : MonoBehaviour
         for (int i = 0; i != SaveData.MaxKarten; i++)
         {
             GameObject newCard = createdCards.Find(card => card.name == $"Karte {i + 1}");
-            if (saveData.AlteKarte == null)
+            if (saveData.AlteKarte == 0)
             {
                 Debug.Log("Alte Karte == Null");
             }
@@ -41,7 +41,8 @@ public class GameCardDuplicator : MonoBehaviour
                 Debug.Log("Show Card; " + newCard + "Karte: " + saveData.Karte);
                 saveData.AlteKarte = saveData.Karte;
             }
-            if (saveData.Karte == null)
+
+            if (saveData.Karte == 0)
             {
                 Debug.Log("Karte nicht gefunden:" + saveData.Karte);
             }
